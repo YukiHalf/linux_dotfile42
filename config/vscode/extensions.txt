@@ -1,0 +1,3 @@
+vscodevim.vim
+Catppuccin.catppuccin-vsc
+Catppuccin.catppuccin-vsc-icons

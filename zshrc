@@ -8,6 +8,15 @@ fi
 autoload -Uz compinit
 compinit
 
+# Vim-style command-line editing in zsh.
+# Esc enters normal mode; i/a/etc. return to insert mode.
+bindkey -v
+export KEYTIMEOUT=10
+
+# Keep familiar history search available in vi insert mode.
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
+
 if command -v fzf >/dev/null 2>&1; then
     source <(fzf --zsh)
 fi

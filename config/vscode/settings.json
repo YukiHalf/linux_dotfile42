@@ -1,0 +1,51 @@
+{
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "catppuccin.accentColor": "mauve",
+  "catppuccin.workbenchMode": "minimal",
+  "catppuccin.bracketMode": "dimmed",
+  "catppuccin.italicKeywords": false,
+  "catppuccin.boldKeywords": false,
+
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.startupEditor": "none",
+
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid",
+  "editor.smoothScrolling": true,
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "selection",
+  "editor.guides.indentation": false,
+  "editor.stickyScroll.enabled": false,
+  "workbench.list.smoothScrolling": true,
+
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.handleKeys": {
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vscode_custom_css.imports": [
+    "file:///home/sdarius-/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.8/dist/updateHandler.js"
+  ]
+}

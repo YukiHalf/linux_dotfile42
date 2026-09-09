@@ -1,0 +1,28 @@
+[/]
+horizontal-margin=8
+vertical-margin=8
+vertical-margin-bottom=8
+window-gap=8
+animation-time=0.15
+show-workspace-indicator=false
+show-window-position-bar=false
+show-focus-mode-icon=false
+
+[keybindings]
+# Vim-style focus. Arrow keys remain as fallbacks.
+switch-left=['<Super>h', '<Super>Left']
+switch-down=['<Super>j', '<Super>Down']
+switch-up=['<Super>k', '<Super>Up']
+switch-right=['<Super>l', '<Super>Right']
+
+# Shift = move the current window.
+move-left=['<Super><Shift>h', '<Super><Ctrl>Left']
+move-down=['<Super><Shift>j', '<Super><Ctrl>Down']
+move-up=['<Super><Shift>k', '<Super><Ctrl>Up']
+move-right=['<Super><Shift>l', '<Super><Ctrl>Right']
+
+# Ctrl = workspace navigation, Ctrl+Shift = move window across workspaces.
+switch-up-workspace=['<Super><Ctrl>k', '<Super>Page_Up']
+switch-down-workspace=['<Super><Ctrl>j', '<Super>Page_Down']
+move-up-workspace=['<Super><Ctrl><Shift>k', '<Super><Ctrl>Page_Up']
+move-down-workspace=['<Super><Ctrl><Shift>j', '<Super><Ctrl>Page_Down']

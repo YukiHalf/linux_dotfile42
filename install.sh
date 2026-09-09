@@ -112,6 +112,10 @@ link_file "$ROOT/config/zellij/config.kdl" "$HOME/.config/zellij/config.kdl"
 link_file "$ROOT/config/zsh/rice.zsh" "$HOME/.config/zsh/rice.zsh"
 link_file "$ROOT/config/bat/config" "$HOME/.config/bat/config"
 
+# VS Code configuration (if VS Code is installed, extensions are installed below).
+link_file "$ROOT/config/vscode/settings.json" "$HOME/.config/Code/User/settings.json"
+link_file "$ROOT/config/vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
+
 # -----------------------------------------------------------------------------
 # Catppuccin theme assets
 # These are deterministic upstream files; fetch them during bootstrap rather
@@ -138,6 +142,19 @@ curl -fsSL \
 
 if command -v bat >/dev/null 2>&1; then
     bat cache --build >/dev/null 2>&1 || true
+fi
+
+# -----------------------------------------------------------------------------
+# VS Code extensions
+# -----------------------------------------------------------------------------
+if command -v code >/dev/null 2>&1; then
+    info "Installing VS Code rice + Vim extensions"
+    while IFS= read -r ext; do
+        [[ -n "$ext" ]] || continue
+        code --install-extension "$ext" --force >/dev/null 2>&1 || warn "Could not install VS Code extension: $ext"
+    done < "$ROOT/config/vscode/extensions.txt"
+else
+    warn "VS Code CLI ('code') not found; config is linked, but extensions were not installed"
 fi
 
 # -----------------------------------------------------------------------------

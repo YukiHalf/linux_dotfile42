@@ -80,3 +80,24 @@ The ordinary terminal configuration files are symlinked from this repo, so editi
 - `valgod ./program` — Valgrind with full leak/origin flags
 - `croot` — jump to current Git repository root
 - `check42` — Git + Norminette check
+
+## Vim-style navigation
+
+This setup intentionally uses Vim-like navigation wherever it fits naturally:
+
+- **Zsh:** `Esc` enters vi normal mode; use `h/j/k/l`, `w/b`, `0/$`, etc. while editing commands.
+- **PaperWM:** `Super+h/j/k/l` focuses windows; `Super+Shift+h/j/k/l` moves windows; `Super+Ctrl+j/k` changes workspace.
+- **Yazi:** already uses native Vim-style `h/j/k/l` navigation.
+- **fzf:** `Ctrl+j` / `Ctrl+k` move through results (fzf defaults).
+- **VS Code:** VSCodeVim provides normal Vim motions; `jj` exits Insert mode. `Alt+h/j/k/l` focuses editor groups and `Alt+Shift+h/j/k/l` moves them.
+- **Browser:** install the Vimium extension manually. Browser stores do not provide a clean portable dotfiles-style installation path. Vimium defaults include `h/j/k/l`, `gg`, `G`, `/`, `f`, `F`, etc.
+
+### VS Code
+
+The bootstrap installs these extensions when the `code` CLI exists:
+
+- `vscodevim.vim`
+- `Catppuccin.catppuccin-vsc`
+- `Catppuccin.catppuccin-vsc-icons`
+
+VS Code is configured for Catppuccin Mocha, mauve accent, minimal workbench styling, relative line numbers, no minimap, and Vim editing.
