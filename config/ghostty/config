@@ -1,0 +1,19 @@
+theme = Catppuccin Mocha
+
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+window-decoration = auto
+window-theme = dark
+
+background-opacity = 0.96
+cursor-style = bar
+cursor-style-blink = false
+mouse-hide-while-typing = true
+
+# Clipboard ergonomics
+copy-on-select = clipboard
+right-click-action = copy-or-paste
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
